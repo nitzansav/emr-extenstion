@@ -1,0 +1,26 @@
+{
+  "name": "DW EMR",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "homepage_url": "https://console.aws.amazon.com/elasticmapreduce/",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "content_scripts": [
+   {
+     "matches": ["https://console.aws.amazon.com/elasticmapreduce*"],
+     "run_at": "document_end",
+     "js": ["contentScript.js"]
+   }
+ ],
+  "icons": {
+      "16": "images/DW_icon16.png",
+      "32": "images/DW_icon32.png",
+      "48": "images/DW_icon48.png",
+      "128": "images/DW_icon128.png"
+    },
+  "options_page": "options.html",
+  "manifest_version": 2
+}
